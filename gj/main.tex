@@ -1,0 +1,70 @@
+%\documentclass[a4paper,12pt]{report}
+\documentclass[a4paper,12pt,fntef]{ctexrep}
+
+%\usepackage[fontset=windows]{ctex}
+%\usepackage{ctex}
+
+\linespread{1.5}%
+
+\usepackage{geometry}
+\geometry{a4paper,scale=0.75}
+
+\usepackage[center]{titlesec}
+\titleformat{\part}{\centering\Huge\bfseries}{}{1em}{}
+\titleformat{\chapter}{\centering\Large\bfseries}{}{1em}{}
+\titleformat{\section}{\large\bfseries}{\thesection、}{1em}{}
+%\titleformat{\subsection}{\bfseries}{(\thesubsection)}{1em}{}
+
+\usepackage{CJKulem}
+
+\usepackage[dvipsnames]{xcolor}
+% \usepackage{color}
+
+\newcommand{\cl}[1]{{\color{magenta} #1}}
+% \newcommand{\hl}[1]{{\colorbox{orange!30}{#1}}}
+
+\usepackage{ulem}
+\newcommand\hl{\bgroup\markoverwith {\textcolor{green!25}{\rule[-.5ex]{2pt}{2.5ex}}}\ULon}
+
+\usepackage[colorlinks,linkcolor=magenta]{hyperref}
+
+\usepackage{enumitem}
+\AddEnumerateCounter{\chinese}{\chinese}{}
+
+\usepackage{zhnumber} % change section number to chinese
+\renewcommand\thesection{\zhnum{section}}
+\renewcommand\thesubsection{\zhnum{subsection}}
+
+\renewcommand{\thefootnote}{}
+%\footnotetext{Footnotetext without footnote mark}
+
+
+\begin{document}
+
+\title{\Huge \bf 供应链金融相关文件汇编}
+\author{\kaishu 都成首采云项目小组}
+\date{\small \kaishu \today}
+
+\maketitle
+
+\tableofcontents
+
+\part{2020}
+\input{src/20200918-226.tex}
+\input{src/20200705-728.tex}
+\input{src/20200318-gj.tex}
+\input{src/20200106-ge.tex}
+
+\part{2019}
+\input{src/20190709-gj.tex}
+\input{src/20190407-ge.tex}
+\input{src/20190214-gj.tex}
+
+\part{2018}
+\input{src/20180410-gj.tex}
+
+\part{2017}
+\input{src/20171013-gj.tex}
+\input{src/20170330-gj.tex}
+
+\end{document}
